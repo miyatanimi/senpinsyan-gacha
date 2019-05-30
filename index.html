@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Dev -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Prod -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div class="row">
+        <nav>
+            <div class="nav-wrapper red darken-1">
+                <a href="#" class="brand-logo center">せんぴんしゃん ガチャ</a>
+            </div>
+        </nav>
+    </div>
+    <div id="app" class="container">
+            <div class="row"><h3>予算と人数を入れてボタンをクリック！</h3></div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="budget" type="text" v-model="budget" placeholder="Budget">
+                        <label for="budget">Budget</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="personNum" type="text" v-model="personNum" placeholder="Number of person">
+                        <label for="personNum">Number of person</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>みんなの予算: {{budget * personNum}} 円</h4>でOKかな？
+                </div>
+                <a class="btn waves-effect waves-light" v-on:click="gacharu(budget * personNum)">OK！ガチャる！</a>
+            </form>
+        </div>
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>結果！ {{totalPrice}} 円</h4></li>
+            <li class="collection-item" v-for="menu in returnMenus">{{menu.name}} / {{menu.price}}円</li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
