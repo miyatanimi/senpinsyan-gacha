@@ -1,0 +1,2 @@
+# senpinsyan-gacha
+せんぴんしゃんガチャです
