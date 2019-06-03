@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>せんぴんしゃんガチャ！</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Dev -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <!-- Prod -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
@@ -40,8 +40,8 @@
             </form>
         </div>
         <ul class="collection with-header">
-            <li class="collection-header"><h4>結果！ {{totalPrice}} 円</h4></li>
-            <li class="collection-item" v-for="menu in returnMenus">{{menu.name}} / {{menu.price}}円</li>
+            <li class="collection-header"><h4>結果！</h4> <p>合計金額: {{totalPrice}} 円</p></li>
+            <li class="collection-item" v-for="menu in returnMenus">【{{menu.cat}}】{{menu.name}} / {{menu.price}}円</li>
         </ul>
     </div>
     <script src="app.js"></script>
