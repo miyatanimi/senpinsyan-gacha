@@ -87,33 +87,3 @@ const menus = [
     {cat: "刀削麺", name: "坦々刀削麺", price: 850},
     {cat: "刀削麺", name: "自家製とろとろ叉焼刀削麺", price: 850}
 ]
-
-
-// const menus = [
-//     {name: "apple", price: 400},
-//     {name: "mikan", price: 100},
-//     {name: "tamago", price: 99},
-//     {name: "kyuru", price: 200}
-// ]
-// let balance = 500;
-// let returnArry = [];
-
-// do{
-//     let result = menus.filter(menu => menu.price < balance);
-//     let randommenus = result[Math.floor(Math.random() * (result.length))];
-    
-//     if(randommenus != undefined){
-//         balance -= randommenus.price;
-//         returnArry.push(randommenus);
-//     }else{
-//         break;
-//     }
-// }while(balance > 0);
-
-// let returnPrice;
-// for(let i of returnArry){
-//     returnPrice += i.price;
-//     console.log(returnPrice);
-// }
-
-// console.log(returnArry,returnPrice);
